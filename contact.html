@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>Linda Smith Counseling</title>
+
+		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<style>
+			/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+			#map {
+				height:260px;
+				border-radius:4px;
+			}
+			/* Optional: Makes the sample page fill the window. */
+			html, body {
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+    </head>
+	<body>
+
+		<!-- Header -->
+		<header id="header">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a class="logo" href="index.html">
+							<img src="img/linda-logo.png" alt="logo">
+						</a>
+					</div>
+					<!-- /Logo -->
+
+					<!-- Mobile toggle -->
+					<button class="navbar-toggle">
+						<span></span>
+					</button>
+					<!-- /Mobile toggle -->
+				</div>
+
+				<!-- Navigation -->
+				<nav id="nav">
+					<ul class="main-menu nav navbar-nav navbar-right">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+				<!-- /Navigation -->
+
+			</div>
+		</header>
+		<!-- /Header -->
+
+		<!-- Hero-area -->
+		<div class="hero-area section">
+
+			<!-- Backgound Image -->
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/contact-page.jpg)"></div>
+			<!-- /Backgound Image -->
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 text-center">
+						<ul class="hero-area-tree">
+							<li><a href="index.html">Home</a></li>
+							<li>Contact</li>
+						</ul>
+						<h1 class="white-text">Get In Touch</h1>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /Hero-area -->
+
+		<!-- Contact -->
+		<div id="contact" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<!-- contact form -->
+					<div class="col-md-6">
+						<h4>Contact Information</h4>
+						<ul class="contact-details">
+							<li><i class="fa fa-envelope"></i>southcenter@mindfultherapygroup.com</li>
+							<li><i class="fa fa-phone"></i>206-708-7274</li>
+							<li><i class="fa fa-map-marker"></i>7100 Fort Dent Way, Suite 220 Seattle, WA 98188</li>
+						</ul>
+					</div>
+					<!-- /contact form -->
+
+					<!-- contact information -->
+					<div class="col-md-5 col-md-offset-1">
+
+						<!-- contact map -->
+						<h4>Mindful Therapy Group</h4>
+						<div id="map"></div>
+						<script>
+                var position = { lat: 47.468389 , lng: -122.246351 };
+
+                // Map style
+                var style = [
+                    {
+                        "featureType": "administrative",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#374050"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "color": "#ebebeb"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape.natural",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            },
+                            {
+                                "color": "#e6e6e6"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "saturation": -100
+                            },
+                            {
+                                "lightness": 45
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            },
+                            {
+                                "hue": "#ff0000"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "visibility": "simplified"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "color": "#fd9836"
+                            },
+                            {
+                                "saturation": "85"
+                            },
+                            {
+                                "lightness": "31"
+                            },
+                            {
+                                "gamma": "1.24"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "labels.text",
+                        "stylers": [
+                            {
+                                "visibility": "simplified"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "hue": "#ff0000"
+                            },
+                            {
+                                "saturation": "1"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "labels.icon",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit.station",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "visibility": "simplified"
+                            },
+                            {
+                                "hue": "#ff0000"
+                            },
+                            {
+                                "saturation": "-100"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit.station.airport",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit.station.bus",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "visibility": "simplified"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit.station.rail",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "visibility": "simplified"
+                            },
+                            {
+                                "hue": "#ff7e00"
+                            },
+                            {
+                                "saturation": "-100"
+                            },
+                            {
+                                "lightness": "19"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "color": "#f5f5f5"
+                            },
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    }
+                ];
+
+                // Set google map options
+                var options = {
+                    center: position,
+                    zoom: 14,
+                    mapTypeControl: false,
+                    streetViewControl: false,
+                    scrollwheel: false,
+                    styles: style
+                };
+
+                var map;
+                function initMap() {
+                    map = new google.maps.Map( document.getElementById('map') , options);
+                    var marker = new google.maps.Marker({
+                        position: position,
+                        map: map
+                    });
+
+                }
+						</script>
+						<!-- /contact map -->
+
+					</div>
+					<!-- contact information -->
+
+				</div>
+				<!-- /row -->
+
+			</div>
+			<!-- /container -->
+
+		</div>
+		<!-- /Contact -->
+
+		<!-- Footer -->
+		<footer id="footer" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<!-- footer logo -->
+					<div class="col-md-6">
+						<div class="footer-logo">
+							<a class="logo" href="index.html">
+								<img src="img/linda-logo.png" alt="logo">
+							</a>
+						</div>
+					</div>
+					<!-- footer logo -->
+
+					<!-- footer nav -->
+					<div class="col-md-6">
+						<ul class="footer-nav">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+					<!-- /footer nav -->
+
+				</div>
+				<!-- /row -->
+
+			</div>
+			<!-- /container -->
+
+		</footer>
+		<!-- /Footer -->
+
+		<!-- preloader -->
+		<div id='preloader'><div class='preloader'></div></div>
+		<!-- /preloader -->
+
+
+		<!-- jQuery Plugins -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArxgkoQyst4fw9ZwXQ1DeOj9mkZaOK-1M&callback=initMap" async defer></script>
+
+
+	</body>
+</html>
